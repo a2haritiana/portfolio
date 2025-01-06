@@ -12,15 +12,15 @@ const projectsCollection = defineCollection({
       worksImage1: z.object({
         url: z.string(),
         alt: z.string()
-      }),
+      }).optional(),
       worksImage2: z.object({
         url: z.string(),
         alt: z.string()
-      }),
+      }).optional(),
       platform: z.string(),
       stack: z.string(),
-      website: z.string(),
-      github: z.string(),
+      website: z.string().nullable(),
+      github: z.string().nullable(),
     })
 });
 
